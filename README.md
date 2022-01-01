@@ -1,1 +1,3 @@
-# rock-paper-scissors
+This is the new and first javascript project I will be working on. I'm nervous because I haven't been learning for 1.5hrs a day like I normally do. Since being back home upstate, I've been mainly learning for only 30mins a day. However, I can always go back to the lessons if I get stuck, which I most certainly will. Just remember to the problem solving practice that we learned about and I'm sure we can take on this challenge. 
+
+For this project, I'll be creating a rock, paper, scissors game to play only on the console. I will learn to write functions to make sure that a game can be played. Then most likely so that multiple games can be played. I'm excited to start and see where this project takes me. 
