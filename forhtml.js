@@ -35,38 +35,33 @@ function playGame() {
             document.getElementById("messageBox").textContent = "You must enter one of the 3 choices to play the game! Click play again!";
         }
         if (playRound(playerSelection, computerSelection) === "You win!"){
-            document.getElementById("messageBox").textContent =
-            `You won! 
-            Score: 
-            You ${playerScore + 1} - ${computerScore} Computer`;
+            document.getElementById("messageBox").textContent =`You won the round!`;
             playerScore++;
+            document.getElementById("playerScoreBox").textContent = `${playerSelection}\r\nYour score: ${playerScore}`
+            document.getElementById("computerScoreBox").textContent = `${computerSelection}\r\nComputer Score: ${computerScore}`
         } else if (playRound(playerSelection, computerSelection) === "You lose!") {
-            document.getElementById("messageBox").textContent =
-            `You lost!! 
-            Score: 
-            You ${playerScore} - ${computerScore + 1} Computer`;
+            document.getElementById("messageBox").textContent = `You lost the round!!` 
             computerScore++;
+            document.getElementById("playerScoreBox").textContent = `${playerSelection}\r\nYour score: ${playerScore}`
+            document.getElementById("computerScoreBox").textContent = `${computerSelection}\r\nComputer Score: ${computerScore}`
         } else {
-            document.getElementById("messageBox").textContent =
-            `It's a tie! 
-            Score: 
-            You ${playerScore} - ${computerScore} Computer`;
+            document.getElementById("messageBox").textContent =`It's a tie!`;
+            document.getElementById("playerScoreBox").textContent = `${playerSelection}\r\nYour score: ${playerScore}`
+            document.getElementById("computerScoreBox").textContent = `${computerSelection}\r\nComputer Score: ${computerScore}`
         }
     
         if (playerScore === 5 && playerScore > computerScore) {
-            document.getElementById("messageBox").textContent = 
-            `You won the game! 
-            The score is: 
-            You ${playerScore} - ${computerScore} Computer`;
+            document.getElementById("messageBox").textContent = `You won the game!`;
+            document.getElementById("playerScoreBox").textContent = `${playerSelection}\r\nYour Final score: ${playerScore}`
+            document.getElementById("computerScoreBox").textContent = `${computerSelection}\r\nComputer Final Score: ${computerScore}`
             playerScore = 0;
             computerScore = 0;
         }
 
         if (computerScore === 5 && computerScore > playerScore) {
-            document.getElementById("messageBox").textContent = 
-            `You lost the game! 
-            The score is: 
-            You ${playerScore} - ${computerScore} Computer`;
+            document.getElementById("messageBox").textContent = `You lost the game!`;
+            document.getElementById("playerScoreBox").textContent = `${playerSelection}\r\nYour Final Score: ${playerScore}`
+            document.getElementById("computerScoreBox").textContent = `${computerSelection}\r\nComputer Final Score: ${computerScore}`
             playerScore = 0;
             computerScore = 0;
         }
